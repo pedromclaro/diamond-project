@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Girl • Next Natalia Beauty</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti para o efeito dourado ao interagir -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDFBF7',
+            sand: '#F7F3EB',
+            champagne: '#EFE7DA',
+            gold: {
+              300: '#EAD196',
+              400: '#D4AF37',
+              500: '#C5A028',
+              600: '#997B1A',
+            },
+            charcoal: '#22201E',
+            muted: '#7A756D',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Suaves gradientes dourados com brilho metálico */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #997B1A 0%, #D4AF37 45%, #F3E8B5 75%, #C5A028 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gold-border-glow {
+      box-shadow: 0 0 35px -8px rgba(212, 175, 55, 0.22);
+    }
+
+    /* Brilho pulsante sutil no ícone */
+    @keyframes subtleGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.35));
+        transform: translateY(0px) scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 28px rgba(212, 175, 55, 0.65));
+        transform: translateY(-4px) scale(1.02);
+      }
+    }
+
+    .glow-animation {
+      animation: subtleGlow 4.5s ease-in-out infinite;
+    }
+
+    /* Textura de fundo sutil e refinada */
+    body {
+      background-color: #FAF8F4;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(234, 209, 150, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.1) 0px, transparent 55%);
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body class="font-sans text-charcoal flex flex-col justify-between items-center selection:bg-gold-300 selection:text-charcoal p-5 sm:p-8 antialiased min-h-screen">
+
+  <!-- Barra de Notificação Superior Minimalista -->
+  <header class="w-full max-w-xl text-center pt-2">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sand border border-gold-300/40 text-xs tracking-widest uppercase font-medium text-gold-600">
+      <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+      Domínio Reservado com Sucesso
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal Centralizado -->
+  <main class="w-full max-w-2xl text-center my-auto py-8">
+    
+    <!-- Ícone Minimalista de Diamante com Linhas Finas de Luxo -->
+    <div class="flex justify-center mb-6">
+      <div class="relative p-6 rounded-3xl bg-cream border border-gold-300/50 shadow-sm gold-border-glow glow-animation">
+        <svg class="w-14 h-14 sm:w-16 sm:h-16 stroke-gold-500 fill-none" viewBox="0 0 24 24" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Diamante Estilizado -->
+          <polygon points="6 3 18 3 22 9 12 22 2 9 6 3" />
+          <line x1="12" y1="22" x2="8" y2="9" />
+          <line x1="12" y1="22" x2="16" y2="9" />
+          <line x1="2" y1="9" x2="22" y2="9" />
+          <line x1="6" y1="3" x2="10" y2="9" />
+          <line x1="18" y1="3" x2="14" y2="9" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Título Principal -->
+    <h2 class="text-xs sm:text-sm uppercase tracking-[0.35em] text-muted mb-2 font-medium">
+      Diamond Estética Apresenta
+    </h2>
+
+    <h1 class="font-serif text-5xl sm:text-7xl font-normal tracking-tight text-charcoal mb-3">
+      The <span class="gold-gradient-text italic font-semibold">Diamond Girl</span>
+    </h1>
+
+    <!-- Tag Vulgo / Zoação Sofisticada -->
+    <div class="inline-block mb-6">
+      <span class="font-serif italic text-lg sm:text-2xl text-charcoal/80 bg-champagne/40 px-5 py-1.5 rounded-full border border-gold-300/30">
+        “Vulgo: Next Natalia Beauty”
+      </span>
+    </div>
+
+    <!-- Mensagem Descontraída de Amigo / Apresentação -->
+    <p class="text-sm sm:text-base leading-relaxed text-muted max-w-lg mx-auto font-light mb-8">
+      O domínio já está garantido na gaveta. Os protocolos secretos de glow, massagem e preenchimento já estão sendo maquinados. Cuidado mercado da estética... o <span class="text-charcoal font-medium">Império Diamond</span> acabou de iniciar o download.
+    </p>
+
+    <!-- Botões de Ação com Estilo de Boutique de Luxo -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto">
+      
+      <!-- Botão Brincadeira WhatsApp / Contato -->
+      <button 
+        onclick="triggerGoldShower(); openDirectMessage();" 
+        class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-charcoal text-cream text-xs uppercase tracking-widest font-medium hover:bg-gold-600 transition-all duration-300 transform active:scale-95 shadow-md flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-gold-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+        </svg>
+        Falar com a Boss
+      </button>
+
+      <!-- Botão Spoiler / Surpresa Carinhosa -->
+      <button 
+        onclick="triggerGoldShower(); showSurpriseModal();" 
+        class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-cream border border-gold-400/60 text-charcoal text-xs uppercase tracking-widest font-medium hover:bg-sand transition-all duration-300 active:scale-95">
+        Spoiler Exclusivo 💎
+      </button>
+
+    </div>
+
+    <!-- Indicador de Status Divertido -->
+    <div class="mt-12 flex items-center justify-center gap-6 text-[11px] tracking-widest uppercase text-muted/70">
+      <div class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        Domínio OK
+      </div>
+      <span class="text-gold-300">•</span>
+      <div class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+        Glow em 99%
+      </div>
+      <span class="text-gold-300">•</span>
+      <div class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+        Haters Avisados
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Rodapé Clean -->
+  <footer class="w-full max-w-xl text-center py-4 border-t border-gold-300/20 text-xs text-muted">
+    <p class="font-serif italic text-sm text-charcoal/70">
+      Feito sob medida para a futura bilionária da estética.
+    </p>
+  </footer>
+
+  <!-- Modal com Mensagem de Amizade / Zoação -->
+  <div id="modal" class="fixed inset-0 bg-charcoal/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-cream rounded-3xl p-6 sm:p-8 max-w-sm w-full border border-gold-300/60 shadow-2xl text-center transform scale-95 transition-transform duration-300" id="modalBox">
+      <div class="w-12 h-12 rounded-full bg-champagne border border-gold-400/40 flex items-center justify-center mx-auto mb-4 text-xl">
+        ✨
+      </div>
+      <h3 class="font-serif text-2xl text-charcoal mb-2 font-normal">Recadinho Oficial</h3>
+      <p class="text-sm text-muted font-light leading-relaxed mb-6">
+        Parabéns pelo novo passo! O site oficial vem aí, mas o domínio já tá no grau. Não esquece de quem montou o site quando tiver faturando milhões por mês no seu império, viu? 🥂✨
+      </p>
+      <button 
+        onclick="closeSurpriseModal()" 
+        class="w-full py-3 rounded-full bg-charcoal text-cream text-xs uppercase tracking-widest font-medium hover:bg-gold-600 transition-colors">
+        Prometo Desconto Vitalício 😂
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts Interativos -->
+  <script>
+    // Chuva de confetes dourados requintados
+    function triggerGoldShower() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 50,
+          spread: 70,
+          origin: { y: 0.7 },
+          colors: ['#D4AF37', '#F3E8B5', '#EAD196', '#ffffff']
+        });
+      }
+    }
+
+    // Modal Control
+    const modal = document.getElementById('modal');
+    const modalBox = document.getElementById('modalBox');
+
+    function showSurpriseModal() {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modalBox.classList.remove('scale-95');
+      modalBox.classList.add('scale-100');
+    }
+
+    function closeSurpriseModal() {
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modalBox.classList.remove('scale-100');
+      modalBox.classList.add('scale-95');
+    }
+
+    // Fechar ao clicar fora
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeSurpriseModal();
+      }
+    });
+
+    // Abrir WhatsApp com mensagem pronta
+    function openDirectMessage() {
+      const msg = encodeURIComponent("Oi Boss! Já vim avisar que o império Diamond Girl foi inaugurado digitalmente 😂✨");
+      // Caso queira colocar o número dela depois: https://wa.me/55XXXXXXXXXXX?text=...
+      window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
+    }
+  </script>
+</body>
+</html>
